@@ -5,6 +5,9 @@ Recommendation System built to test the concepts of a paper to be published.
 
 - Python 3.5 or higher
 - MongoDB 3.x
+- Google Word2Vec (or any other word embedder of your preference).
+
+Google's can be downloadde from: https://code.google.com/archive/p/word2vec/
 
 ## Datasets
 
@@ -18,13 +21,21 @@ Yelp
 
 ### Format
 
-Before running the scripts, you need to format the datasets so that it can be read by the program
+Before running the scripts, you need to format the datasets so that it can be read by the program. The format is the `class name` followed by a dot, `a number`, and the `.txt` extension. For example, if you were to convert 5 files from a train folder, the first one being from classA, the following three from classB and the last one from classC. You would have the following structure after conversion:
+
+```
+classA.1.txt
+classB.1.txt
+classB.2.txt
+classB.3.txt
+classC.1.txt
+```
 
 ## Installing
 
 The program is python interpreted, so you don't need any kind of installation, however some python libraries may be missing, which requires you to install the required libraries. To this kind of usage, a requirements.txt file is provided in this repository. You can install the dependencies using pip. Simply run the following command:
 
-pip3 install -r requirements.txt
+`pip3 install -r requirements.txt`
 
 ## Running
 
@@ -34,29 +45,56 @@ Testing the scripts can be divided into two steps: The first one being the creat
 
 To create the models, run:
 
-python3 trainning_module.py "folderName" "trainName"
+`python3 trainning_module.py "trainFolder" "datasetName"`
 
-folderName: is the folder that contains all the train set in the format class.number.txt (Only txt files accepted)
+* trainFolder: The folder that contains all the train samples in the format `class.number.txt` (Only txt files accepted)
+* datasetName: The dataset that the train/test set belongs. It will use the models referent to the dataset.
 
-trainName: is the name of the model, you need to train the model with the correct train/test set to have good accuracy
-
-## Testing the models
+### Testing the models
 
 To test the models, run:
 
-python3 testing_module.py "folderName" "trainName"
+`python3 testing_module.py "testFolder" "datasetName"`
 
-folderName: is the folder that contains all the test set in the format class.number.txt (Only txt files accepted)
+* testFolder: The folder that contains all the test samples in the format `class.number.txt` (Only txt files accepted)
+* datasetName: The dataset that the train/test set belongs. It will use the models referent to the dataset.
 
-trainName: is the name of the model, you need to train the model with the correct train/test set to have good accuracy
+### Running Train and Test at once
 
-## Running all at once
+You can run both stages train and test at once.
+For this case, you need to run:
+
+`python3 main.py "trainFolder" "testFolder" "datasetName" `
+
+* trainFolder: The folder that contains all the train samples in the format `class.number.txt` (Only txt files accepted)
+* testFolder: The folder that contains all the test samples in the format `class.number.txt` (Only txt files accepted)
+* datasetName: The dataset that the train/test set belongs. It will use the models referent to the dataset.
+
+
+### Running multiple datasets at once
 
 You can run both train and test for different datasets at once.
-For this case you need to create a file called order.txt that will contain the dataset names. The script assumes the dataset folder is datasets and you have a structure like the following datasets/train and datasets/test for train and test respectively.
+For this case you need to create a file called `order.txt` that will contain the dataset names and the order they will be executed. The script assumes the dataset folder is ***datasets*** and you have the following folder structure:
 
-For that, run the following script:
+```
+.
++--+--_datasets
+      +--_train
+         +--_"trainClassA.1.txt"
+         +--_"trainClassA.2.txt"
+         +--_"trainClassB.1.txt"
+      +--_test
+         +--_"testClassA.1.txt"
+         +--_"testClassA.2.txt"
+         +--_"testClassB.1.txt"
+```
 
-python3 complete_test.py
+To run the script, use the following command:
+
+`python3 complete_test.py`
+
+There's an `order.txt` sample file included.
 
 ## Auxiliary Scripts
+
+We provide auxiliary shell scripts to help you convert datasets to the our format. They are located at the scripts folder

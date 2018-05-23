@@ -6,9 +6,8 @@ import sys
 trainFolder = sys.argv[1]
 testFolder = sys.argv[2]
 testName = sys.argv[3]
-# dbAccess = md.MemoryDatabase()
 dbAccess = mp.MongoPersistence(testName)
 
 trainM.doTrain(trainFolder,testName,dbAccess)
-resultado = testM.doTests(testFolder,testName,dbAccess)
-print('Resultado',resultado)
+results = testM.doTests(testFolder,testName,dbAccess)
+print('Results',results)
