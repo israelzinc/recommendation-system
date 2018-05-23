@@ -16,7 +16,7 @@ import operator
 
 class MongoPersistence:
     db = None
-    databaseName = 'recommendations-new'    
+    databaseName = 'recommendations-journal'    
     testName = None
 
     def __initDB__(self):

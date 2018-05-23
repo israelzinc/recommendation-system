@@ -280,6 +280,6 @@ def kDistanceTest(folderPath, testName, dbAccess, csvFileName):
 
 if __name__ == "__main__":
     testFolder = sys.argv[1]
-    testName = 'r8'
+    testName = sys.argv[2]
     dbAccess = mp.MongoPersistence(testName)
-    # doTests(testFolder,testName,dbAccess)
+    doTests(testFolder,testName,dbAccess)

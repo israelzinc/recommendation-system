@@ -18,6 +18,6 @@ def doTrain(trainFolder,testName,dbAccess):
 
 if __name__ == "__main__":
     trainFolder = sys.argv[1]
-    testName = 'r8'
-    dbAccess = mp.MongoPersistence(testName)    
+    testName = sys.argv[2]
+    dbAccess = mp.MongoPersistence(testName)
     doTrain(trainFolder,testName,dbAccess)

@@ -36,7 +36,7 @@ with open(fileName) as f:
         print("Test Name",testName)
 
         dbAccess = mp.MongoPersistence(testName)
-        # trainM.doTrain(trainFolder,testName,dbAccess)
+        trainM.doTrain(trainFolder,testName,dbAccess)
 
         csvFileName = 'kDistanceTest.csv'
         kDistResults = testM.kDistanceTest(testFolder,testName,dbAccess, csvFileName)

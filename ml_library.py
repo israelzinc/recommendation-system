@@ -70,7 +70,8 @@ def omegarizeBOW(bow):
 
 	print("Optimizing Omega")
 	for num_clusters in range(l_bound,u_bound):
-	    cluster = KMeans(n_clusters=num_clusters, max_iter=100, n_jobs=-1)
+	    cluster = KMeans(n_clusters=num_clusters, max_iter=100, n_jobs=1)
+		# MacOS needs to run in exactly 1 job otherwise it never stop running
 	    # cluster = KMeans(n_clusters=num_clusters, max_iter=300, n_jobs=-1)
 	    cluster.fit(mat)
 	    rc = cluster.score(mat)
