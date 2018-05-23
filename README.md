@@ -3,25 +3,29 @@ Recommendation System built to test the concepts of a paper to be published.
 
 ## Pre-Requisites
 
+# Software
+
 - Python 3.5 or higher
-- MongoDB 3.x
-- Google Word2Vec (or any other word embedder of your preference).
+- MongoDB 3.4.9 or higher
 
-Google's can be downloadde from: https://code.google.com/archive/p/word2vec/
+# Word-embedder
+You will also need a word embedder. Theoretically you can use any word-embedder of your preference that gensim supports. Some code adaptations may be required if you wanna use some other than google's Word2vec
 
-## Datasets
+Google's can be downloaded from: https://code.google.com/archive/p/word2vec/
 
-All the datasets can be found in different pages
+# Datasets
 
-BBC-Sports
-Reuters
-20-News
-OHSUMED
-Yelp
+The datasets used in the paper can be found in different pages listed bellow (as for May 2018):
 
-### Format
+BBC-Sports: http://mlg.ucd.ie/datasets/bbc.html
+Reuters: https://archive.ics.uci.edu/ml/datasets/Reuters-21578+Text+Categorization+Collection
+20-News: https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups
+OHSUMED: http://davis.wpi.edu/xmdv/datasets/ohsumed
+Yelp: https://www.yelp.com/dataset/challenge
 
-Before running the scripts, you need to format the datasets so that it can be read by the program. The format is the `class name` followed by a dot, `a number`, and the `.txt` extension. For example, if you were to convert 5 files from a train folder, the first one being from classA, the following three from classB and the last one from classC. You would have the following structure after conversion:
+# Format
+
+Before running the scripts, you need to format the datasets so that it can be read by the program. The format is the `class name` followed by a dot, `a number`, and the `.txt` extension. For example, if you were to convert 5 files from a train folder, the first one being from classA, the following three from classB and the last one from classC, you would have the following structure after conversion:
 
 ```
 classA.1.txt
@@ -30,6 +34,8 @@ classB.2.txt
 classB.3.txt
 classC.1.txt
 ```
+
+We provide some auxiliary scripts to help you convert the datasets to the desired format, check the **Scripts** section.
 
 ## Installing
 
