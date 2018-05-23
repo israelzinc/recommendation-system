@@ -17,11 +17,11 @@ Google's can be downloaded from: https://code.google.com/archive/p/word2vec/
 
 The datasets used in the paper can be found in different pages listed bellow (as for May 2018):
 
-BBC-Sports: http://mlg.ucd.ie/datasets/bbc.html
-Reuters: https://archive.ics.uci.edu/ml/datasets/Reuters-21578+Text+Categorization+Collection
-20-News: https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups
-OHSUMED: http://davis.wpi.edu/xmdv/datasets/ohsumed
-Yelp: https://www.yelp.com/dataset/challenge
+- BBC-Sports: http://mlg.ucd.ie/datasets/bbc.html
+- Reuters: https://archive.ics.uci.edu/ml/datasets/Reuters-21578+Text+Categorization+Collection
+- 20-News: https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups
+- OHSUMED: http://davis.wpi.edu/xmdv/datasets/ohsumed
+- Yelp: https://www.yelp.com/dataset/challenge
 
 ### Format
 
