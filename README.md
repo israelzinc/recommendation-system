@@ -3,17 +3,17 @@ Recommendation System built to test the concepts of a paper to be published.
 
 ## Pre-Requisites
 
-# Software
+### Software
 
 - Python 3.5 or higher
 - MongoDB 3.4.9 or higher
 
-# Word-embedder
+### Word-embedder
 You will also need a word embedder. Theoretically you can use any word-embedder of your preference that gensim supports. Some code adaptations may be required if you wanna use some other than google's Word2vec
 
 Google's can be downloaded from: https://code.google.com/archive/p/word2vec/
 
-# Datasets
+### Datasets
 
 The datasets used in the paper can be found in different pages listed bellow (as for May 2018):
 
@@ -23,7 +23,7 @@ Reuters: https://archive.ics.uci.edu/ml/datasets/Reuters-21578+Text+Categorizati
 OHSUMED: http://davis.wpi.edu/xmdv/datasets/ohsumed
 Yelp: https://www.yelp.com/dataset/challenge
 
-# Format
+### Format
 
 Before running the scripts, you need to format the datasets so that it can be read by the program. The format is the `class name` followed by a dot, `a number`, and the `.txt` extension. For example, if you were to convert 5 files from a train folder, the first one being from classA, the following three from classB and the last one from classC, you would have the following structure after conversion:
 
